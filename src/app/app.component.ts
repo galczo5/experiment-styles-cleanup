@@ -8,17 +8,16 @@ import {DynamicComponent} from "./dynamic.component";
       Styles applied when this box is red
     </div>
 
+    <app-dynamic *ngIf="visible"/>
+
     <button (click)="createComponent()">Click me!</button>
   `
 })
 export class AppComponent {
-  private readonly componentFactoryResolver = inject(ComponentFactoryResolver);
-  private readonly injector = inject(Injector);
+  visible = false;
 
   createComponent(): void {
-    const factory = this.componentFactoryResolver.resolveComponentFactory(DynamicComponent);
-    const componentRef = factory.create(this.injector);
-
-    setTimeout(() => componentRef.destroy(), 5000);
+    this.visible = true;
+    setTimeout(() => this.visible = false, 5000);
   }
 }

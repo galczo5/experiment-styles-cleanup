@@ -1,8 +1,8 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  template: '',
+  selector: 'app-dynamic',
+  template: 'dynamic component created!',
   encapsulation: ViewEncapsulation.None,
   styles: [`
     .test {
