@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "experiment-styles-cleanup:build:production"
+              "buildTarget": "experiment-styles-cleanup:build:production"
             },
             "development": {
-              "browserTarget": "experiment-styles-cleanup:build:development"
+              "buildTarget": "experiment-styles-cleanup:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "experiment-styles-cleanup:build"
+            "buildTarget": "experiment-styles-cleanup:build"
           }
         },
         "test": {
